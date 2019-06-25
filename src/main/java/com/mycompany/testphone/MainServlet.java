@@ -37,10 +37,10 @@ public class MainServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>name ejb " + daoEjb.getName() + "</h1>");
-            out.println("<h1>db Url " + System.getenv("JDBC_DATABASE_URL") + "</h1>");
-            out.println("<h1>USERNAME " + System.getenv("JDBC_DATABASE_USERNAME") + "</h1>");
-            out.println("<h1>PASSWORD " + System.getenv("JDBC_DATABASE_PASSWORD") + "</h1>");
-            out.println("<h1>java OPTS " + System.getenv("JAVA_OPTS") + "</h1>");            
+           // out.println("<h1>db Url " + System.getenv("JDBC_DATABASE_URL") + "</h1>");
+           // out.println("<h1>USERNAME " + System.getenv("JDBC_DATABASE_USERNAME") + "</h1>");
+           // out.println("<h1>PASSWORD " + System.getenv("JDBC_DATABASE_PASSWORD") + "</h1>");
+           // out.println("<h1>java OPTS " + System.getenv("JAVA_OPTS") + "</h1>");            
             out.println("</body>");
             out.println("</html>");
         }
