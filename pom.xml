@@ -31,21 +31,22 @@
              <artifactId>postgresql</artifactId>
              <version>42.2.5</version>
          </dependency>
+         
          <dependency>
              <groupId>org.apache.tomee</groupId>
              <artifactId>javaee-api</artifactId>
-             <version>${openejb.javaee.api}</version>
+             <version>8.0</version>
              <scope>provided</scope>
          </dependency>
          <dependency>
              <groupId>org.apache.tomee</groupId>
              <artifactId>tomee-embedded</artifactId>
-             <version>${tomee.version}</version>
+             <version>8.0.0-M1</version>
          </dependency>
          <dependency>
              <groupId>org.apache.tomee</groupId>
              <artifactId>arquillian-tomee-embedded</artifactId>
-             <version>${tomee.version}</version>
+             <version>8.0.0-M1</version>
              <scope>test</scope>
          </dependency>
           
