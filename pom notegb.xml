@@ -12,11 +12,6 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-         <tomee.version>7.0.0-SNAPSHOT</tomee.version>
-        <openejb.javaee.api>7.0-SNAPSHOT</openejb.javaee.api>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
     
     <dependencies>
@@ -31,31 +26,13 @@
              <artifactId>postgresql</artifactId>
              <version>42.2.5</version>
          </dependency>
-         <dependency>
-             <groupId>org.apache.tomee</groupId>
-             <artifactId>javaee-api</artifactId>
-             <version>${openejb.javaee.api}</version>
-             <scope>provided</scope>
-         </dependency>
-         <dependency>
-             <groupId>org.apache.tomee</groupId>
-             <artifactId>tomee-embedded</artifactId>
-             <version>${tomee.version}</version>
-         </dependency>
-         <dependency>
-             <groupId>org.apache.tomee</groupId>
-             <artifactId>arquillian-tomee-embedded</artifactId>
-             <version>${tomee.version}</version>
-             <scope>test</scope>
-         </dependency>
-          
     </dependencies>
 
     <build>
          <finalName>testphone</finalName>    
             <plugins>
          
-           <!--  <plugin>
+            <plugin>
                  <groupId>org.apache.maven.plugins</groupId>
                  <artifactId>maven-dependency-plugin</artifactId>
                  <version>2.3</version>
@@ -75,17 +52,7 @@
                                     </configuration>
                         </execution>
                  </executions>
-            </plugin>     --> 
-            
-            <plugin>
-                 <groupId>org.apache.tomee.maven</groupId>
-                 <artifactId>tomee-maven-plugin</artifactId>
-                 <version>${tomee.version}</version>
-                  <configuration>
-                      <tomeeVersion>${tomee.version}</tomeeVersion>
-                      <tomeeClassifier>jaxrs</tomeeClassifier>
-                  </configuration>
-            </plugin>        
+            </plugin>            
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -111,12 +78,5 @@
             
         </plugins>
     </build>
-
-   <repositories>
-    <repository>
-      <id>apache-snapshots</id>
-      <url>https://repository.apache.org/content/repositories/snapshots/</url>
-    </repository>
-    </repositories>
 
 </project>
